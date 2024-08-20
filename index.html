@@ -3,57 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Primera Pagina Web</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
+
 </head>
 <body>
     <header>
-        <h1>Jorge Steven Santana Salazar</h1>
-        <h3>Mi Primera Pagina Wed</h3>
+        <h1 class="titulo">Jorge Steven Santana Salazar</h1>
     </header>
-    <div>
-        <h2>¿Quien soy yo?</h2>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, quidem? Id, neque molestias voluptatum provident ullam quia aliquid impedit error consequatur reiciendis suscipit, ab velit qui vero natus itaque voluptatibus!
-        </p>
-    </div>
-    <div>
-        <main>
-            <h2>Mis Tecnologias Favoritas</h2>
-            
-            <section>
-                <h3>HTML</h3>
-            </section>
-            <section>
-                <h3>CSS</h3>
-            </section>
-            <section>
-                <h3>JavaScript</h3>
-            </section>
-            <section>
-                <h3>React</h3>
-            </section>
-            
-        </main> 
-    </div>
-    <div>
-        <h3>Mis Actividades Favoritas</h3>
-        <section>
+    <div class="all">
+    <section class="about">
+        <h1>Sobre Mi</h1>
+        <p>Soy steven, tengo 26 años soy de Bogota, Colombia actualmente estudio full Stack developer 
+            y tambien estoy en octavo semestre de Ingenierioa Mecatronica,  </p>
+    </section>
+        
+    <section class="tect-fav">
+        <h1>Mis Tecnologias Favoritas</h1>
+        <div class="logos">
             <div>
-                <label>Titulo</label>
-                <input>
+                <h2>HTML</h2>
+                <img src="./img/html-5.png" alt="logo_html">
             </div>
             <div>
-                <label>Descripcio</label>
-                <input>
+                <h2>CSS</h2>
+                <img src="./img/css-3.png" alt="logo_css">
             </div>
             <div>
-                <label>URL de la imagen</label>
-                <input>
+                <h2>JavaScrict</h2>
+                <img src="./img/js.png" alt="logo_js">
             </div>
-        </section>
+        </div>
+    </section>
+    <section class="Act-fav">
+        <div class = "Info">
+        <h1>Mis Actividades Favoritas</h1>
+        
+            <div><input type="text" placeholder = "Actividad"></div>
+            <div><input type="text" placeholder = "Descripcion"></div>
+            <div><input type="text" placeholder = "URL imagen"></div>  
+        
+        <button class="button">Agregar Actividad</button>
+        <div class="space-img">
+            <p>No hay actividades por el momento</p>
+        </div>
     </div>
-    
+    </section>
+</div>
 </body>
 </html>
