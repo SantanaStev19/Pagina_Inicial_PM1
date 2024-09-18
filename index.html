@@ -4,55 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primera Pagina Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
-
 </head>
 <body>
-    <header>
-        <h1 class="titulo">Jorge Steven Santana Salazar</h1>
-    </header>
-    <div class="all">
-    <section class="about">
-        <h1>Sobre Mi</h1>
-        <p>Soy steven, tengo 26 años soy de Bogota, Colombia actualmente estudio full Stack developer 
-            y tambien estoy en octavo semestre de Ingenierioa Mecatronica,  </p>
+    <header class="header">Steven Santana <span>Estudiante Full Stack</span> </header>
+    <section class="contenedor sombra">
+        <h2>Sobre Mi</h2>
+        <p class="sobreMi">Hola! como puedes ver esta es la primera pagina web que realizo, soy de Bogota, Colombia 
+            y me preparo para ser Full Stack Developer e Ingeniero Mecatronico, considero que soy una persona 
+            que le gusta los simple de la vida, como lo es tomar una taza de cafe me gusta montar bici y jugar futbol. 
+            Gracias por ver mi primero paso en el campo de la tecnologia  </p>
     </section>
-        
-    <section class="tect-fav">
-        <h1>Mis Tecnologias Favoritas</h1>
-        <div class="logos">
-            <div>
-                <h2>HTML</h2>
-                <img src="./img/html-5.png" alt="logo_html">
-            </div>
-            <div>
-                <h2>CSS</h2>
-                <img src="./img/css-3.png" alt="logo_css">
-            </div>
-            <div>
-                <h2>JavaScrict</h2>
-                <img src="./img/js.png" alt="logo_js">
-            </div>
-        </div>
-    </section>
-    <section class="Act-fav">
-        <div class = "Info">
-            <h1>Mis Actividades Favoritas</h1>
-                <div class = "form">
-                    <input id = "title" class = "input" type="text" placeholder = "Actividad">
-                    <input id = "description" class="input" type="text" placeholder = "Descripcion">
-                    <input id = "imgUrl" class="input" type="text" placeholder = "URL imagen">  
-                </div>       
-            <button id="addActivity" class="button">Agregar Actividad</button>
-        </div>
-    </section>
-    <section class = "respuesta">
-        <div id = "contenedor" class="tarjeta">
+    <section class="contenedor sombra">
+        <h2>Mis Tecnologias Favoritas</h2>
 
-        </div>
+            <div class="tecnologias">
+                <section class="logos">
+                    <div class="tarjeta" >
+                        <h3>HTML</h3>
+                        <img src="img/html-5.png" alt="logo_html">
+                    </div >
+                    <div class="tarjeta">
+                        <h3>CSS</h3>
+                        <img src="img/css-3.png" alt="logo_css">
+                    </div >
+                    <div class="tarjeta">
+                        <h3>JavaScript</h3>
+                        <img src="img/js.png" alt="logo_js">
+                    </div >                    
+                </section>
+            </div>
     </section>
-</div>
-<script src="./scripts/index.js"></script>
+            
+    <section class="contenedor sombra">
+            <section class="actividades">
+                <h2>Mis Actividades Favoritas</h2>
+                    <div class="campos">
+                        <label>Titulo</label>
+                        <input id="title" class="input" type="text" placeholder="Actividad">
+                        <label>Descripcion</label>
+                        <input id="description" class="input Descripcion" type="text" placeholder="Descripcion">
+                        <label>URL de la imagen</label>
+                        <input id="imgUrl" class="input" type="url" placeholder="URL de la imagen">
+                    </div>
+                    <div>
+                        <input id="addActivity" class="button" type="submit" value="Ingresar">
+                    </div>
+            </section>
+            <div id="encapsular" class="tarjetas">
+
+            </div>            
+    </section>           
+         
+<script src="./scripts/index.js"></script>    
 </body>
 </html>

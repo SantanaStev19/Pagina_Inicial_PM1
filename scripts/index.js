@@ -10,7 +10,7 @@ class Activity {
 class Repository {
     constructor() {
         this.activities = [];
-        this.id = 0;
+        this.id = 1;
     }
 
     getAllActivities() {
@@ -33,7 +33,7 @@ const repository = new Repository();
 
 const render = () => {
 
-    const contenedorTarjeta = document.getElementById("contenedor");
+    const contenedorTarjeta = document.getElementById("encapsular");
     contenedorTarjeta.innerHTML = "";//se crea la tarjeta vacia
 
     const activities = repository.getAllActivities();
@@ -52,31 +52,58 @@ const render = () => {
     
         const descripcionTarjeta = document.createElement("p")
         descripcionTarjeta.innerHTML = activity.description   
+
+        const delateTarjeta = document.createElement("button")
+        delateTarjeta.innerHTML = activity.id
+        delateTarjeta.textContent = "Eliminar Tarjeta"
+
+        delateTarjeta.addEventListener("click",() => {
+            repository.deleteActivity(activity.id);
+            render();
+        })
     
         tarjeta.appendChild(titleTarjeta)  
         tarjeta.appendChild(imgTarjeta)
         tarjeta.appendChild(descripcionTarjeta)
+        tarjeta.appendChild(delateTarjeta)
 
-        return tarjeta
+
+        contenedorTarjeta.appendChild(tarjeta);
     }) // en esta funcion ponemos la informacion que tomamos de los imput de la pagina
-    contenedorTarjeta.appendChild(...htmlActivities)
-}
-
-const activityDOM = () => {
-    const title = document.getElementById("title").value;
-    const description = document.getElementById("description").value;
-    const imgUrl = document.getElementById("imgUrl").value;
     
+
+}
+const activityDOM = () => {
+    const titleInput = document.getElementById("title");
+    const descriptionInput = document.getElementById("description");
+    const imgUrlInput = document.getElementById("imgUrl");
+
+    const title = titleInput.value; // Toma los valores de los inputs
+    const description = descriptionInput.value;
+    const imgUrl = imgUrlInput.value;
+
     if(!title || !description || !imgUrl){
         alert('Falta informacion')
         return;
     }
-    repository.createActivity(title, description, imgUrl)
-    title.value = "";
-    return render()
 
+    repository.createActivity(title, description, imgUrl);
+
+    titleInput.value = "";
+    descriptionInput.value = "";
+    imgUrlInput.value = "";
+
+    render();
 }
+
+
+
 
 const button = document.getElementById("addActivity");
 
 button.addEventListener("click", activityDOM);
+
+
+
+
+
